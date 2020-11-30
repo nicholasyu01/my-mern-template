@@ -40,3 +40,15 @@ npm run dev
 ```
 
 For deploying to Heroku, please refer to [this](https://www.youtube.com/watch?v=71wSzpLyW9k) helpful video by TraversyMedia.
+
+//in main folder
+npm install && npm run client-install
+//in client folder
+npm i
+
+//run dev (both client and server)
+npm run dev
+//run client
+npm run client
+//run server
+npm run server
