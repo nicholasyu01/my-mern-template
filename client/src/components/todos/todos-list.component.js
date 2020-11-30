@@ -54,13 +54,13 @@ export default class TodosList extends Component {
                     </tbody>
                 </table>
                 <Link
-                    to="/todos"
+                    to="/create"
                     style={{
                         fontFamily: "monospace"
                     }}
                     className="col s5 brand-logo center black-text"
                 >
-                    TODOS
+                    Create task
             </Link>
             </div>
         )
