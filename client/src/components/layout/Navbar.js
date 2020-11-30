@@ -18,6 +18,15 @@ class Navbar extends Component {
               MERN
             </Link>
           </div>
+            <Link
+              to="/todos"
+              style={{
+                fontFamily: "monospace"
+              }}
+              className="col s5 brand-logo center black-text"
+            >
+              TODOS
+            </Link>
         </nav>
       </div>
     );

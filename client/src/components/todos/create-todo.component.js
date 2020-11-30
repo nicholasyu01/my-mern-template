@@ -52,7 +52,7 @@ onSubmit(e) {
         todo_completed: this.state.todo_completed
     };
 
-    axios.post('http://localhost:3000/api/todos/add', newTodo)
+    axios.post('/api/todos/add', newTodo)
         .then(res => console.log(res.data));
 
     this.setState({
