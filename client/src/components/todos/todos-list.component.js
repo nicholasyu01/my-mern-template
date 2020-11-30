@@ -8,7 +8,7 @@ const Todo = props => (
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
-            <Link to={"/edit/"+props.todo._id}>Edit</Link>
+            <Link to={"/edit/" + props.todo._id}>Edit</Link>
         </td>
     </tr>
 )
@@ -17,7 +17,7 @@ export default class TodosList extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {todos: []};
+        this.state = { todos: [] };
     }
 
     componentDidMount() {
@@ -25,13 +25,13 @@ export default class TodosList extends Component {
             .then(response => {
                 this.setState({ todos: response.data });
             })
-            .catch(function (error){
+            .catch(function (error) {
                 console.log(error);
             })
     }
 
     todoList() {
-        return this.state.todos.map(function(currentTodo, i){
+        return this.state.todos.map(function (currentTodo, i) {
             return <Todo todo={currentTodo} key={i} />;
         })
     }
@@ -50,9 +50,18 @@ export default class TodosList extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        { this.todoList() }
+                        {this.todoList()}
                     </tbody>
                 </table>
+                <Link
+                    to="/todos"
+                    style={{
+                        fontFamily: "monospace"
+                    }}
+                    className="col s5 brand-logo center black-text"
+                >
+                    TODOS
+            </Link>
             </div>
         )
     }
