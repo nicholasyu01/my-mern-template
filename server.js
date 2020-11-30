@@ -45,7 +45,6 @@ if(process.env.NODE_ENV === 'production') {
 
   app.get('*', (req,res) => {
     res.sendFile(path.resolve(_dirname, 'client', 'build', 'index.html'));
-    res.sendFile(path.resolve(_dirname, 'client', 'build', 'todos-list.component.js'));
   })
 }
 
