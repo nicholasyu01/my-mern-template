@@ -52,3 +52,7 @@ npm run dev
 npm run client
 //run server
 npm run server
+
+
+
+deployed at https://nicks-mern-todo.herokuapp.com/ 
