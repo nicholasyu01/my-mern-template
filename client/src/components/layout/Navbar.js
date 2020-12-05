@@ -23,7 +23,7 @@ class Navbar extends Component {
               style={{
                 fontFamily: "monospace"
               }}
-              className="col s5 brand-logo center black-text"
+              className=" btn btn-lrg col s5 brand-logo center green accent-3 black-text"
             >
               TODOS
             </Link>

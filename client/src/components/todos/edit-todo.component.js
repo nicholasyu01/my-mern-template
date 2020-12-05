@@ -68,7 +68,7 @@ export default class EditTodo extends Component {
             todo_completed: this.state.todo_completed
         };
         console.log(obj);
-        axios.post('http://localhost:3000/api/todos/update/'+this.props.match.params.id, obj)
+        axios.post('/api/todos/update/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
         this.props.history.push('/');
@@ -76,7 +76,7 @@ export default class EditTodo extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h3 align="center">Update Todo</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group"> 
@@ -108,14 +108,14 @@ export default class EditTodo extends Component {
                                     />
                             <label className="form-check-label">Low</label>
                         </div>
-                        <div className="form-check form-check-inline">
+                        {/* <div className="form-check form-check-inline">
                             <input  className="form-check-input" 
                                     type="radio" 
                                     name="priorityOptions" 
                                     id="priorityMedium" 
                                     value="Medium" 
                                     checked={this.state.todo_priority==='Medium'} 
-                                    onChange={this.onChangeTodoPriority}
+                                    onChange={this.onChangeTodoPriority}  
                                     />
                             <label className="form-check-label">Medium</label>
                         </div>
@@ -129,7 +129,7 @@ export default class EditTodo extends Component {
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">High</label>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="form-check">
                         <input  className="form-check-input"

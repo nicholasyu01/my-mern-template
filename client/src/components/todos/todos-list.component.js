@@ -38,7 +38,7 @@ export default class TodosList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h3>Todos List</h3>
                 <table className="table table-striped" style={{ marginTop: 20 }} >
                     <thead>
@@ -58,8 +58,8 @@ export default class TodosList extends Component {
                     style={{
                         fontFamily: "monospace"
                     }}
-                    className="col s5 brand-logo center black-text"
-                >
+                    className="btn btn-lrg col s5 brand-logo center blue accent-3 black-text"
+                    >
                     Create task
             </Link>
             </div>
